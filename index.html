@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TAC</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="shortcut icon" type="img/icon" href="img/favicon.ico">
+
+		<script src="scripts/jquery.js"></script>
+	</head>
+	<body>
+		<div class="indicator">
+ 			<div class="progress-container">
+    		<div class="progress-bar" id="myBar"></div>
+  		</div>
+		</div>
+		<div class="head-wrap">
+			<header>
+				<div class="header-right">
+					<img src="img/logo.webp">
+					<nav>
+						<li><a id="page1_btn" class="active-page"  onclick="ToStart ()">home</a></li>
+						<li><a id="page2_btn" onclick="ToWorld ()">world</a></li>
+						<li><a id="page3_btn" onclick="ToChar ()">characters</a></li>
+						<li><a id="page4_btn" onclick="ToFeat ()">features</a></li>
+						<li><a id="page5_btn" onclick="ToHellp ()">help</a></li>
+					</nav>
+				</div>
+				<img class='logo-igra-head' src="img/logo_igra.webp">
+				<div>
+					<form>
+						<select>
+							<option>English</option>
+							<option>Français</option>
+							<option>Deutsch</option>
+							<option>Español</option>
+							<option>Русский</option>
+						</select>
+					</form>
+				</div>
+			</header>
+		</div>
+
+		<main>
+			<div id="menu-button" class="navbar-toggle collapsed" onclick="toggleCollaps ()">
+				<span class="icon-bar left"></span>
+				<span class="icon-bar none"></span>
+				<span class="icon-bar right"></span>
+				<nav id="menu-nav" class="toggle-menu">
+						<li><a id="menu_page1_btn" class="menu-active-page" onclick="ToStart ()">home</a></li>
+						<li><a id="menu_page2_btn" onclick="ToWorld ()">world</a></li>
+						<li><a id="menu_page3_btn" onclick="ToChar ()">characters</a></li>
+						<li><a id="menu_page4_btn" onclick="ToFeat ()">features</a></li>
+						<li><a id="menu_page5_btn" onclick="ToHellp ()">help</a></li>
+					<nav>
+			</div>
+			<section class="page1" id="page1">
+				<div class="section-wrapper">
+					<figure>
+						<img src="img/page1/slogan.webp">
+						<h1>The Alchemist Code<br>is available for download now!</h1>
+					</figure>
+					<div class="downloads">
+						<a href="https://itunes.apple.com/us/app/the-alchemist-code/id1263809665?ls=1&mt=8"><img src="img/page1/btn-iphone.webp"></a>
+						<a href="https://play.google.com/store/apps/details?id=sg.gumi.alchemistww"><img src="img/page1/btn-android.webp"></a>
+						<a href="https://www.amazon.com/gp/product/B0769CDG8G"><img src="img/page1/btn-amzon.webp"></a>
+					</div>
+					<div class="videoframe">
+						<iframe width="100%" height="100%" src="https://www.youtube.com/embed/wQuaeUupdmA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+
+					<div class="social">
+						<a href="https://www.facebook.com/thealchemistcode"><img src="img/icons/fb.webp"></a>
+						<a href="https://www.instagram.com/alchemist_code"><img src="img/icons/ist.webp"></a>
+						<a href="https://www.youtube.com/channel/UCdHyJ0P1AMG45CiijoZEVzw"><img src="img/icons/yt.webp"></a>
+						<a href="https://twitter.com/alchemist_code"><img src="img/icons/twit.webp"></a>	
+					</div>
+				</div>
+			</section>
+
+			<section class="page2" id="page2">	
+				<div class="section-wrapper2">
+					<div class="sec2-head">
+						<span>World</span>
+					</div>
+
+					<div class="row">
+						<div class="slider-container">
+							<div class="slider">
+								<img class="slider_img firstSlideImg" src="img/page2/slides/slider-1.jpg">
+								<img class="slider_img secondSlideImg" src="img/page2/slides/slider-2.jpg">
+								<img class="slider_img thisdSlideImg" src="img/page2/slides/slider-3.webp">
+							</div>
+
+							<div class="indicators">
+								<img onclick="changeDot0 ()" src="img/page2/slides/dot-on.png">
+								<img onclick="changeDot1 ()" src="img/page2/slides/dot-off.png">
+								<img onclick="changeDot2 ()" src="img/page2/slides/dot-off.png">
+							</div>
+						</div>
+						<div class="text-box">
+							<div class="textSlide">
+								<p>In the Continent where the Tower of Babel stands, Nimul and Emmel devised Alchemy in their ambition to become like the gods</p><br>
+
+								<p>Humanity was in danger of annihilation as Alchemy became a tool of war used by the ambitious for dominance over the lands.</p><br>
+
+								<p>Sensing its threat to humankind and seeing its devastating powers... the kingdoms of Babel formed the Alliance of the Seven Kingdoms.</p><br>
+
+								<p>Headed by the suzerain state of Northern Pride, Alchemy was branded as the Forbidden Art.</p><br>
+
+								<p>For the following few centuries, a delicate balance and peace was maintained by the Seven Kingdoms.</p><br>
+							</div>
+							<div class="textSlide" style="display: none">
+								<p>In the year 911 of Babel, the fragile peace crumbled. The Western Kingdom of Wratharis, the Nation of Wrath, revived Alchemy once again as an instrument of warfare.</p><br>
+								<p>This antagonistic act enveloped the whole continent in an atmosphere of unrest. In retaliation, the remaining Kingdoms formed a United Suppression Army, with Envylia as their vanguard.</p><br>
+								<p>Wratharis was overthrown and Alchemy was once again sealed in darkness.</p><br>
+							</div>
+							<div class="textSlide" style="display: none">
+								<p>Twenty years have passed since then...</p><br>
+								<p>As if to answer the call of the Continent’s agitation...</p><br>
+								<p>the Forbidden Art’s Seal started to show signs of weakening...</p><br>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="page3" id="page3">				
+				<div class="section-wrapper2">
+					<div class="sec2-head">
+						<span>Characters</span>
+					</div>
+
+					<div class='tab_buttons'>
+						<ul>
+							<li id="tab_button1" class="active_tab tab1" onclick="firstTab ()"><a>Chapter 1</a></li>
+							<li id="tab_button2" class="inactive_tab tab2" onclick="secondTab ()"><a>Chapter 2</a></li>
+							<li id="tab_button3" class="inactive_tab tab3" onclick="thirdTab ()"><a>Chapter 3</a></li>
+						</ul>
+					</div>
+
+					<div id="tab_window1" class="tab_window active_tab_window">
+						<div class="character_content">
+							<img src="img/page3/mc/logi.webp">
+							<div class="information">
+								<h2><span>Logi Crowley</span><p>(Voiced by: Natsuki Hanae)</p></h2>
+								<p class="quote">"I Want Power... The Power to Protect the World!"</p>
+
+								<div class="bio">
+									<ul>
+										<li><span>Country:</span>Envylia</li>
+										<li><span>Birtday:</span>January 11</li>
+									</ul>
+										
+									<p>Logi, a squire of the Blue Flame Guard, the most powerful knight faction of Envylia. He trains hard daily, because of his childhood promise to Dias and Agatha - to create a world where people can live in happiness.</p>										
+									<p>Driven by a strong sense of justice, he perseveres through what he believes is right. But Dias and Agatha often scold him for his impulsiveness.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="character_content">
+							<img src="img/page3/mc/dias.webp">
+							<div class="information">
+								<h2><span>Dias Crowley</span><p>(Voiced by: Kaito Ishikawa)</p></h2>
+								<p class="quote">"I Desire Power.. The Ultimate Power to Change the World!"</p>
+
+								<div class="bio">
+									<ul>
+										<li><span>Country:</span>Wratharis</li>
+										<li><span>Birtday:</span>June 21</li>
+									</ul>
+										
+									<p>Dias, a squire of the Blue Flame Guard, knight faction of Envylia.</p>
+									<p>Well composed, and sometimes even cold-hearted, like Logi and Agatha, Dias wishes for a world without class, where everyone can live happily.</p>
+									<p>He believes this to be unattainable without gaining ultimate power.</p>
+									<p>His actions, even if harsh, stems from his love for Logi and Agatha, as he feels very protective towards them.	</p>							
+								</div>
+							</div>
+						</div>
+
+						<div class="character_content">
+							<img src="img/page3/mc/agatha.webp">
+							<div class="information">
+								<h2><span>Agatha Crowley</span><p>(Voiced by: Yoko Hikasa)</p></h2>
+								<p class="quote">"How Wonderful It Would Be, If This Were a Peaceful World Where We Could Live Along Our Loved Ones"</p>
+
+								<div class="bio">
+									<ul>
+										<li><span>Country:</span>Envylia</li>
+										<li><span>Birtday:</span>Unknown</li>
+									</ul>
+										
+									<p>Agatha, a nun from an Envylian convent.</p>										
+									<p>She cares deeply about her childhood companions, Logi and Dias, and behaves like their older sister. They grew up together, sharing each other's dreams, hopes, joys and sorrows.</p>
+									<p>She’s a good cook, and often makes food for the homeless who come to the convent. She’s also good at sewing, and makes clothes for the children.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="character_content">
+							<img class="bigCharacterImg" src="img/page3/mc/ouroboros.webp">
+							<div class="information">
+								<h2><span>Ouroboros</span><p>(Voiced by: Yui Horie)</p></h2>
+								<p class="quote">"My Name is Ouroboros... I am the Bond between Truth and the World, the Observer of Destiny."</p>
+
+								<div class="bio">
+									<ul>
+										<li><span>Country:</span>Unknown</li>
+										<li><span>Birtday:</span>Unknown</li>
+									</ul>
+										
+									<p>Ouroboros, a mysterious girl who appears before the Door of Truth.</p>										
+									<p>She calls herself the Observer of Destiny, but her objectives and true identity are unknown.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div id="tab_window2" class="tab_window inactive_tab_window">
+						<div class="character_content">
+							<img src="img/page3/mc/edgar.webp" style="left: -195px;">
+							<div class="information">
+								<h2><span>Edgar L. Leonheart</span><p>(Voiced by: Ryoto Osaka)</p></h2>
+								<p class="quote">"Don’t Make Women Cry... Nothing in the World is More Important than That."</p>
+
+								<div class="bio">
+									<ul>
+										<li><span>Country:</span>Slothstein</li>
+										<li><span>Birtday:</span>May 25</li>
+									</ul>
+										
+									<p>Edgar is a sharpshooter traveling the world on his Alchemia bike with his beloved gun “Betty.” As a firm believer of non-killing, he loads his guns with his own powerful Alchemic Energy instead of bullets, basically knocking his opponents unconscious without taking their lives.</p>										
+									<p>He may seem like a sleazy playboy at first glance, but he opposes anyone who makes a lady cry. He’s a hot-blooded type of guy who will furiously make a stand against any womanizer, strong or weak.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="character_content">
+							<img src="img/page3/mc/fiona.webp">
+							<div class="information">
+								<h2><span>Fiona</span><p>(Voiced by: Yoshika Akashi)</p></h2>
+								<p class="quote">"I’m Not Sure If I Can Help... But I’ll Do the Best I Can!"</p>
+
+								<div class="bio">
+									<ul>
+										<li><span>Country:</span>Slothstein</li>
+										<li><span>Birtday:</span>Unknowmn</li>
+									</ul>
+										
+									<p>Fiona is the daughter of Redington City’s ex-mayor Edward Elester. “Elester” is also a manufacturer of alkaroids for household and communication purposes. As expected of the daughter of a noble family, she’s a sweet and proper girl, but when push comes to shove, she does have the courage to take matters in her own hands. Her personality is honest and to the point, and she relates to anyone with a sense of equality.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="character_content">
+							<img src="img/page3/mc/al.webp">
+							<div class="information">
+								<h2><span>Al</span><p>(Voiced by: Ikumi Akami)</p></h2>
+								<p class="quote">"My Name Is Al! I’m Not Just an Ordinary Alkemono!"</p>
+
+								<div class="bio">
+									<ul>
+										<li><span>Country:</span>Slothstein</li>
+										<li><span>Birtday:</span>Unknowmn</li>
+									</ul>
+										
+									<p>Al is a pet-type alkaroid. Though he’s an old model without any installed speech functionalities, he gained the ability to speak after a certain event. Edward gave him to Fiona as a birthday present when she was a child, and she’s always taken good care of him. He’s got a mischievous demeanor, and when it comes to Fiona, he’s very easy to excite.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="character_content">
+							<img src="img/page3/mc/don.webp">
+							<div class="information">
+								<h2><span>Don Taras</span><p>(Voiced by: Daisuke Matsuoka)</p></h2>
+								<p class="quote">"What Are You Babbling About? Just Bring It On... I’ll Take Good Care of You."</p>
+
+								<div class="bio">
+									<ul>
+										<li><span>Country:</span>Slothstein</li>
+										<li><span>Birtday:</span>Unknowmn</li>
+									</ul>
+										
+									<p>Don Taras is a Mafia boss controlling the “Real Heaven” and “Little Heaven” districts of Redington City. He’s an old-fashioned spirit with a strong sense for duty and humanity, who wouldn’t allow anyone in his organization who’d make a woman cry. In order to deal with the approaching cataclysm, for several years, he’s been saving Alchemic Energy in his right arm.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="tab_window3" class="tab_window inactive_tab_window">
+						<div class="character_content">
+							<img src="img/page3/mc/lis.webp">
+							<div class="information">
+								<h2><span>Lisbeth Finn Lustburg</span><p>(Voiced by: Ai Furicata)</p></h2>
+								<p class="quote">"Women fall in love with men too! As long as we don't hate each other, I'm sure we can find a way to get along!"</p>
+
+								<div class="bio">
+									<ul>
+										<li><span>Country:</span>Lustburg</li>
+										<li><span>Birtday:</span>March 19</li>
+									</ul>
+										
+									<p>Lisbeth is the daughter of the owner of a cheap bar in the outskirts of Lustburg. Having grown up around a bar, she doesn’t have much sense of gender distinction against her own country's men. Though she’s entered the Academy of Magic, her student career hasn’t looked quite promising. Thanks to her straightforward and kind personality however, she’s been able to make good friends.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="character_content">
+							<img class="bigCharacterImg" src="img/page3/mc/alma.webp">
+							<div class="information">
+								<h2><span>Alma</span><p>(Voiced by: Rika Morinaga)</p></h2>
+								<p class="quote" >"Come on. If you think of the bad things, you'll miss out on the fun."</p>
+
+								<div class="bio">
+									<ul>
+										<li><span>Country:</span>Lustburg</li>
+										<li><span>Birtday:</span>Unknown</li>
+									</ul>
+										
+									<p>Lisbeth’s friend. Quickly spotting rumors or information, her actions are led by her curious nature. She has good athletic skills, is muscular, and has quite a powerful side. She purposely makes herself look average in order to use her networking skills to obtain information constantly. It is said that she possesses information pertaining to government secrets.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="character_content">
+							<img src="img/page3/mc/rebecca.webp">
+							<div class="information">
+								<h2><span>Rebecca Helkovara</span><p>(Voiced by: Hyosei)</p></h2>
+								<p class="quote">"From here, I, Rebecca Helkovara Lustburg alone will destroy the monsters!"</p>
+
+								<div class="bio">
+									<ul>
+										<li><span>Country:</span>Lustburg</li>
+										<li><span>Birtday:</span>Unknown</li>
+									</ul>
+										
+									<p>A daughter born into the Lustburg family. She is blessed with having an education in and knowledge of magic, while also having excellent athletic skills, though not to the level of Alma’s. She has strong views on family and the roles of men and women so she looks down on others, though she has persuasive skills that support her charismatic nature. She has a large family entourage and no interest in mingling with friends.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+			</section>
+
+			<section class="page4" id="page4">
+				<div class="section-wrapper">
+					<div class="sec2-head">
+						<span>Features</span>
+					</div>
+
+					<div class='ft_tab_buttons'>
+						<ul>
+							<li><a onclick="toSummon ()">Summon</a></li>
+							<li><a onclick="toCustomize ()">Customize</a></li>
+							<li><a onclick="toStratigize ()">Stratigize</a></li>
+							<li><a onclick="toBattle ()">Battle</a></li>
+							<li><a onclick="toQuest ()">Quest</a></li>
+							<li><a onclick="toArena ()">Arena & Co-op</a></li>
+						</ul>
+					</div>
+
+					<article>
+						<h4 class="light">The Pinnacle of Japanese Mobile Strategy RPGs, Enjoyed by Millions in Japan</h4>
+						<h5 class="light">Experience Unparalleled Audiovisuals and the Best In Class Japanese Content - from Intense 3D Animation, to Stunning Graphics, Superb Music, and Voice Acting!</h5>
+					</article>
+
+					<div class="feature_row" id="ft1">
+						<div class="feature_box">
+							<p>
+								<img src="img/page4/two-line-left.webp">
+								Summon
+								<img src="img/page4/two-line-right.webp">
+							</p>
+							<span><br>Use Alchemy to Transmute and Summon Past Heroes (called Phantoms). Collect, Grow, and Evolve Them, and They Will Aid You In Your Battles!<br><br></span>
+						</div>
+
+						<img src="img/page4/summon.webp">
+					</div>
+
+					<div class="feature_row" id="ft2">
+						<img src="img/page4/customize.webp">
+						<div class="feature_box">
+							<p>
+								<img src="img/page4/two-line-left.webp">
+								Customize 
+								<img src="img/page4/two-line-right.webp">
+							</p>
+							<span><br>Customize Strategic Parties and Leverage Their Job and Elemental Strengths for Battles to Go in Your Favor. The Possibilities Are Endless!<br><br></span>
+						</div>
+					</div>
+
+					<div class="feature_row" id="ft3">						
+						<div class="feature_box">
+							<p>
+								<img src="img/page4/two-line-left.webp">
+								Strategize 
+								<img src="img/page4/two-line-right.webp">
+							</p>
+							<span><br>Manoeuvre Through Multi-Dimensional Terrains and Consider the Difference in Elevation and Orientation to Turn the Tides of Your Battles!<br><br></span>
+						</div>
+						<img src="img/page4/strategize.webp">
+					</div>
+
+					<div class="feature_row" id="ft4">
+						<img src="img/page4/battle.webp">
+						<div class="feature_box">
+							<p>
+								<img src="img/page4/two-line-left.webp">
+								Battle
+								<img src="img/page4/two-line-right.webp">
+							</p>
+							<span><br>Experience Genuine, Nerve-Racking Turn-Based Tactical Battles Seamlessly on Your Mobile Devices!<br><br></span>
+						</div>			
+					</div>
+
+					<div class="feature_row" id="ft5">
+						<div class="feature_box">
+							<p>
+								<img src="img/page4/two-line-left.webp">
+								Quest
+								<img src="img/page4/two-line-right.webp">
+							</p>
+							<span><br>Take On Exciting Story and Event Quests while Uncovering Compelling Story Chapters and Gripping Character Backstories!<br><br></span>
+						</div>
+
+						<img src="img/page4/quest.webp" id="ft6">
+					</div>
+
+					<div class="feature_row">
+						<img src="img/page4/battle.webp">
+						<div class="feature_box">
+							<p>
+								<img src="img/page4/two-line-left.webp">
+								Arena & Co-op 
+								<img src="img/page4/two-line-right.webp">
+							</p>
+							<span><br>Put Your Skills to the Test and Climb Daily Arena Rankings or Play with Fellow Players in Real-Time Multiplayer Co-op for Additional Rewards!<br><br></span>
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+			<section class="page5" id="page5">
+				<div class="section-wrapper3">
+					<form class="issue-form">
+						<h3>Submit about issue</h3>
+
+						<label class="required" for="mail">Your E-mail</label>
+						<input required type="" id="mail" class="mail">
+
+						<label class="required" for="subj">Subject</label>
+						<input required type="text" id="subj" class="subj">
+
+						<label class="required" for="desc" >Description</label>
+						<textarea required type="text" class="desc" id="desc" placeholder='Please enter the details of your request. A member of our support staff will respond as soon as possible.'></textarea>
+
+
+						<label class="required" for="platform">Platform</label>
+						<select id="platform" class="platform" required>
+							<option>-</option>
+							<option>Android</option>
+							<option>iOS</option>
+							<option>Amazon</option>
+						</select>
+
+						<label class="required" for="type">Issue type</label>
+						<select id="type" class="type" required>
+							<option>-</option>
+							<option>In-App-Purshare Issues</option>
+							<option>Account Issues</option>
+							<option>Gameplay Issues</option>
+							<option>Event Issues</option>
+							<option>Other</option>
+						</select>
+
+						<label for="file">Attachments</label>
+						<div class="file">							
+							<input type="file" name="file"><span>Add or drop files here</span>
+						</div>
+						<input type="submit" value="Submit" class="validateBtn">
+					</form>
+
+
+					<form class="suggestion-form">
+						<h3>Submit about your suggestion</h3>
+
+						<label class="required" for="mail-sug">Your E-mail</label>
+						<input required type="email" id="mail-sug" class="mail">
+
+						<label class="required" for="subj-sug">Subject</label>
+						<input required type="text" id="subj-sug" class="subj">
+
+						<label class="required" for="desc-sug" >Description</label>
+						<textarea required type="text" class="desc" id="desc-sug" placeholder='Please enter the details of your request. A member of our support staff will respond as soon as possible.'></textarea>
+
+
+						<label class="required" for="platform-sug">Platform</label>
+						<select id="platform-sug" class="platform" required >
+							<option>-</option>
+							<option>Android</option>
+							<option>iOS</option>
+							<option>Amazon</option>
+						</select>
+
+
+						<label for="file">Attachments</label>
+						<div class="file">							
+							<input type="file" name="file"><span>Add or drop files here</span>
+						</div>
+						<input type="submit" value="Submit" class="validateBtn">
+					</form>
+				</div>
+			</section>
+		</main>
+
+
+
+		<div class="foot-wrap">
+			<footer>
+				<ul>
+					<li><a href="">gumi Games</a></li>
+					<li><a href="">Terms of Service</a></li>
+					<li><a href="">Privacy Policy</a></li>
+					<li><a href="">Contact us</a></li>
+					<li><a href="">FAQ</a></li>
+				</ul>
+
+				<div class="social">
+						<a href="https://www.facebook.com/thealchemistcode"><img src="img/icons/fb.webp"></a>
+						<a href="https://www.instagram.com/alchemist_code"><img src="img/icons/ist.webp"></a>
+						<a href="https://www.youtube.com/channel/UCdHyJ0P1AMG45CiijoZEVzw"><img src="img/icons/yt.webp"></a>
+						<a href="https://twitter.com/alchemist_code"><img src="img/icons/twit.webp"></a>	
+					</div>
+
+				<p>©FgG, Published by gumi Inc</p>
+			</footer>
+		</div>
+		<script src="scripts/script.js"></script>
+<!-- 		<script src="scripts/indicator.js"></script>
+		<script src="scripts/form.js"></script>
+		<script src="scripts/tabs.js"></script>
+		<script src="scripts/active-page.js"></script>
+		<script src="scripts/features.js"></script>
+		<script src="scripts/menu.js"></script>
+		<script src="scripts/slider.js"></script>
+		<script src="scripts/scroll.js"></script>  -->
+	</body>
+</html>
